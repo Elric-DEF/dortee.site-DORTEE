@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="headline">
+            <img src="imagens/Tiago.jpg" alt="">
+            <div class="texto-headline">
+                <h2>Pb. Tiago</h2>
+                <p>Método DORTEE...</p>
+            </div><!--texto-headline-->
+        </div><!--headline-->
+        <div id="oi" class="chat">
+
+        </div><!--chat-->
+    </section>
+
+    <script>
+    
+        var chat = document.getElementById("oi")
+        const som = new Audio('notificaco.wav')
+        console.log(som)
+        var timerQuiz = 6500
+    
+        function criarMensagem(texto){
+            var mensagemBox = document.createElement("div")
+            var mensagem = document.createElement("div")
+            var imagemMensagem = document.createElement("img")
+            imagemMensagem.src = "imagens/Tiago.jpg"
+
+            chat.appendChild(mensagemBox)
+
+            mensagemBox.setAttribute("class","mensagem-box")
+            mensagem.setAttribute("class","mensagem")
+            imagemMensagem.setAttribute("class","imagem-mensagem")
+
+
+            mensagem.innerHTML = texto
+
+            mensagemBox.appendChild(imagemMensagem)
+            mensagemBox.appendChild(mensagem)
+
+            
+            // set opacity to 1 -> fade in
+            setTimeout(() => 
+            mensagemBox.style.opacity=1,
+            scrollTo(0, mensagemBox.offsetTop)
+            , 500);
+            som.play()
+
+            scrollTo(0, mensagem.offsetTop)
+            
+        }
+
+        function criarQuiz(num){
+            timerQuiz = 5000
+            var mensagemBox = document.createElement("div")
+            var containerBotao1 = document.createElement("div")
+            var botao1 = document.createElement("a")
+            var quebraLinha = document.createElement("br")
+            var containerBotao2 = document.createElement("div")
+            var botao2 = document.createElement("a")
+
+            if (num == 1){
+                botao2.setAttribute("class","nao")
+                botao1.innerHTML = "SIM"
+                botao2.innerHTML = "Não"
+                //Colocar texto para a continuação do quiz 1
+                //Segundo paramentro é o quiz seguinte
+                function clicou(el){
+                    el.style.backgroundColor = "#104CCD"
+                    el.style.border = "none"
+                    el.style.color = "white"
+                    setTimeout(() => criarMensagem("<p>E se eu te mostrasse um Guia prático de devocional diário capaz de deixar a sua leitura bíblica tão prazeiroza quanto assistir a sua serie favorita na netflix?</p> <img src=\"imagens/animation.gif.gif\">"),600)
+                    
+                    setTimeout(() => continuacao("Você gostaria de conhecer ?", 2,2600),2100)
+                }
+
+                botao1.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+
+                botao2.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+            }
+            else if(num == 2){
+                botao2.classList.remove("nao")
+                botao2.setAttribute("class","sim2")
+                botao1.innerHTML = "Sim!"
+                botao2.innerHTML = "Com certeza!"
+                function clicou(el){
+                    el.style.backgroundColor = "#104CCD"
+                    el.style.border = "none"
+                    el.style.color = "white"
+                    setTimeout(() => criarMensagem("Antes de continuar, eu preciso saber..."),700)
+                    
+                    setTimeout(() => continuacao("Vc acredita que a bíblia é a palavra de Deus e portanto o nosso único manual de fé e de prática??",3, 3000),2200)
+                }
+                botao1.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+
+                botao2.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+            
+            }
+            else if(num == 3){
+                botao2.classList.remove("sim2")
+                botao2.setAttribute("class","nao")
+                botao1.innerHTML = "SIM"
+                botao2.innerHTML = "NÃO"
+
+                function clicou(el){
+                    el.style.backgroundColor = "#104CCD"
+                    el.style.border = "none"
+                    el.style.color = "white"
+                    setTimeout(() => criarMensagem("Que benção..."),500)
+                    
+                    setTimeout(() => criarMensagem("Então vc vai ficar muito feliz o que eu vou compartilhar com vc aqui..."),1600)
+
+                    setTimeout(() => criarMensagem("Eu desenvolvi um método diferente de fazer os devocionais… Esse método eu chamo de DORTEE..."),3200)
+
+                    setTimeout(() => criarMensagem("O que é DORTEE? DORTEE é a união dos 6 pontos que são indispensáveis pra qualquer devocional diário e esses 6 pontos dão nome ao método. "),4700)
+                    
+                    setTimeout(() => continuacao("<p>“D” - Data</p><p>“O” - Oração</p><p>“R” - Revisão</p><p>“T” - Texto</p><p>“E” - Execução</p><p>“E” - Explanação</p>",4,6700),6200)
+                }
+
+                botao1.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+
+                botao2.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+            }
+            else if(num == 4){
+                botao2.classList.remove("nao")
+                botao2.setAttribute("class","sim2")
+                botao1.style.height = "auto"
+                botao2.style.height = "auto"
+                botao1.innerHTML = "Como funciona isso na prática?"
+                botao2.innerHTML = "Me conta mais"
+
+                function clicou(el){
+                    el.style.backgroundColor = "#104CCD"
+                    el.style.border = "none"
+                    el.style.color = "white"
+                    setTimeout(() => criarMensagem("Eu explico tudo isso em detalhes no E-BOOK que eu escrevi \"Guia Prático de Devocional Diário\"..."),500)
+                    
+                    setTimeout(() => continuacao("Normalmente ele é vendido a R$ 97,00 mas hoje eu estou liberando um desconto especial de 52% e ele ficará 3x de R$ 19,70",5,3100),1700)
+                }
+
+                botao1.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+
+                botao2.addEventListener("click", function(){
+                    clicou(this)
+                }, {once : true})
+            }
+            else if(num == 5){
+                botao1.style.height = "auto"
+                botao2.style.height = "auto"
+                botao2.setAttribute("class","sim2")
+                botao1.innerHTML = "Já estou dentro!"
+                botao2.innerHTML = "Quero aprender agora!"
+
+            botao1.addEventListener("click", function(){
+                //Colocar texto para a continuação do quiz 2
+                window.location.href = "https://sun.eduzz.com/1259886"
+            })
+            botao2.addEventListener("click", function(){
+                //Colocar um location.href pro checkout
+                window.location.href = "https://sun.eduzz.com/1259886"
+            })
+            }
+
+            
+
+            chat.appendChild(mensagemBox)
+
+            mensagemBox.setAttribute("class","mensagem-box quiz")
+            containerBotao1.setAttribute("class","container-botao1")
+            containerBotao2.setAttribute("class","container-botao2")
+            botao1.setAttribute("class","sim")
+            
+            mensagemBox.appendChild(containerBotao1)
+            containerBotao1.appendChild(botao1)
+            mensagemBox.appendChild(quebraLinha)
+            mensagemBox.appendChild(containerBotao2)
+            containerBotao2.appendChild(botao2)
+
+            // set opacity to 1 -> fade in
+            setTimeout(() => 
+            mensagemBox.style.opacity=1,
+            scrollTo(0, mensagemBox.offsetTop)
+            ,500);
+
+            
+        }
+
+        function continuacao(texto, num, timer) {
+            var intervalo = setTimeout(function(){
+                criarMensagem(texto)
+            },1000)
+
+            var intervalo = setTimeout(function(){
+                criarQuiz(num)
+            },timer)
+
+        }
+
+        var intervalo = setTimeout(function(){
+            criarMensagem("Opa, paz do Senhor!!")
+            //criarMensagem("<img src=\"animation.gif.gif\">")
+        },500)
+
+        var intervalo = setTimeout(function(){
+            criarMensagem("<p>Pensa e me responde rápido, como você acha que seria a sua família, o seu trabalho e o seu ministério se você não visse o tempo passar durante o seu devocional diário da mesma forma como você não vê o tempo passar quando está nas redes sociais?</p> <img src=\"animation.gif.gif\"> ")
+        },1500)
+
+        var intervalo = setTimeout(function(){
+            criarMensagem("Sua vida seria melhor?")
+        },5500)
+
+        var intervalo = setTimeout(function(){
+            criarQuiz(1)
+        },timerQuiz)
+
+    </script>
+</body>
+</html>

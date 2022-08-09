@@ -67,11 +67,9 @@
             // set opacity to 1 -> fade in
             setTimeout(() => 
             mensagemBox.style.opacity=1,
-            scrollTo(0, mensagemBox.offsetTop)
+            scrollTo(0, mensagem.offsetTop)
             , 500);
             som.play()
-
-            scrollTo(0, mensagem.offsetTop)
             
         }
 
@@ -147,7 +145,7 @@
 
                     setTimeout(() => criarMensagem("O que é DORTEE? DORTEE é a união dos 6 pontos que são indispensáveis pra qualquer devocional diário e esses 6 pontos dão nome ao método. "),4700)
                     
-                    setTimeout(() => continuacao("<p>“D” - Data</p><p>“O” - Oração</p><p>“R” - Revisão</p><p>“T” - Texto</p><p>“E” - Execução</p><p>“E” - Explanação</p>",4,6700),6200)
+                    setTimeout(() => continuacao("<p>“D” - Data</p><p>“O” - Oração</p><p>“R” - Revisão</p><p>“T” - Texto</p><p>“E” - Execução</p><p>“E” - Explanação</p>",4,4000),6200)
                 }
 
                 botao1.addEventListener("click", function(){
@@ -170,9 +168,21 @@
                     el.style.backgroundColor = "#104CCD"
                     el.style.border = "none"
                     el.style.color = "white"
-                    setTimeout(() => criarMensagem("Eu explico tudo isso em detalhes no E-BOOK que eu escrevi \"Guia Prático de Devocional Diário\"..."),500)
+                    setTimeout(() => criarMensagem("Eu explico tudo isso em detalhes no E-BOOK que eu escrevi \"Guia Prático de Devocional Diário\"..."),200)
+
+                    setTimeout(() => criarMensagem("<img src=\"imagens/Design sem nome (1).gif\">"),1000)
+
+                    setTimeout(() => criarMensagem("😱Eu compilei quase 14 anos de estudos sobre devocional diário nesse livro...👆👆"),2600)
+
+                    setTimeout(() => criarMensagem("<p>Eu tenho uma boa notícia pra você!!!</p><p>Meu propósito de vida é levar o maior número de pessoas a um relacionamento com Deus por meio da Bíblia...</p>"),4200)
+
+                    setTimeout(() => criarMensagem("Por isso eu tenho dois presentes pra vc"),6000)
+
+                    setTimeout(() => criarMensagem("O primeiro é um desconto 52% normalmente esse livro é vendido a R$ 97,00..."),8000)
+
+                    setTimeout(() => criarMensagem("Mas hoje ele sai para você a 47 ou 6x de R$ xx,xx"),10000)
                     
-                    setTimeout(() => continuacao("Normalmente ele é vendido a R$ 97,00 mas hoje eu estou liberando um desconto especial de 52% e ele ficará 3x de R$ 19,70",5,3100),1700)
+                    setTimeout(() => continuacao("<p>O segundo presente é:</p> <p>Após a compra do livro minha equipe entrará em contato com você para agendarmos uma mentoria em grupo de um hora para tirar todos as suas dúvidas!!!</p>",5,4000),11800)
                 }
 
                 botao1.addEventListener("click", function(){

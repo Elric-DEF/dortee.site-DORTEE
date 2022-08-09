@@ -19,14 +19,13 @@ section{
 
 .headline{
     padding: 15px 25px;
-    background-color: rgb(128, 128, 128);
+    background-color: gray;
     display: flex;
     align-items: center;
-    /*
     position: fixed;
     top: 0;
     right: 0;
-    */
+    z-index: 999;
     width: 100%;
 }
 
@@ -38,6 +37,8 @@ section{
 }
 
 .chat{
+    position: relative;
+    top: 80px;
     padding: 0 4%;
 }
 

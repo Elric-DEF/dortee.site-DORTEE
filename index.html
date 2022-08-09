@@ -66,10 +66,11 @@
             
             // set opacity to 1 -> fade in
             setTimeout(() => 
-            mensagemBox.style.opacity=1,
-            scrollTo(0, mensagem.offsetTop)
-            , 500);
+            mensagemBox.style.opacity=1, 500);
             som.play()
+
+            setTimeout(() => 
+            scrollTo(0, mensagem.offsetTop), 650);
             
         }
 

@@ -11,10 +11,7 @@ section{
 
 .mensagem-box{
     opacity: 0;
-    transition: opacity .5s;
-}
-.mostrar {
-    opacity: 1;
+    transition: opacity .6s;
 }
 
 .headline{

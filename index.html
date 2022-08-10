@@ -70,7 +70,7 @@
             som.play()
 
             setTimeout(() => 
-            scrollTo(0, mensagem.offsetTop), 650);
+            scrollTo(0, mensagem.offsetTop + 20), 650);
             
         }
 
@@ -173,15 +173,18 @@
 
                     setTimeout(() => criarMensagem("<img src=\"imagens/Design sem nome (1).gif\">"),1000)
 
-                    setTimeout(() => criarMensagem("😱Eu compilei quase 14 anos de estudos sobre devocional diário nesse livro...👆👆"),2600)
+                    setTimeout(() => 
+                    scrollTo(0, mensagem.offsetTop), 1800);
 
-                    setTimeout(() => criarMensagem("<p>Eu tenho uma boa notícia pra você!!!</p><br> <p>Meu propósito de vida é levar o maior número de pessoas a um relacionamento com Deus por meio da Bíblia...</p>"),4200)
+                    setTimeout(() => criarMensagem("😱Eu compilei quase 14 anos de estudos sobre devocional diário nesse livro...👆👆"),8600)
 
-                    setTimeout(() => criarMensagem("Por isso eu tenho dois presentes pra vc"),6000)
+                    setTimeout(() => criarMensagem("<p>Eu tenho uma boa notícia pra você!!!</p><br> <p>Meu propósito de vida é levar o maior número de pessoas a um relacionamento com Deus por meio da Bíblia...</p>"),10200)
 
-                    setTimeout(() => criarMensagem("<p>O primeiro é um desconto 52% normalmente esse livro é vendido a R$ 97,00...</p><br> <p>Mas hoje ele sai para você a 47 ou 6x de R$ 10,24</p>"),8300)
+                    setTimeout(() => criarMensagem("Por isso eu tenho dois presentes pra vc"),12000)
+
+                    setTimeout(() => criarMensagem("<p>O primeiro é um desconto 52% normalmente esse livro é vendido a R$ 97,00...</p><br> <p>Mas hoje ele sai para você a R$ 47 ou 5x de R$ 10,24</p>"),14300)
                     
-                    setTimeout(() => continuacao("<p>O segundo presente é:</p><br><p>Após a compra do livro, minha equipe entrará em contato com você para agendarmos uma mentoria de 1 hora em grupo e tirarmos todas as suas dúvidas!!!</p>",5,4000),10800)
+                    setTimeout(() => continuacao("<p>O segundo presente é:</p><br><p>Após a compra do livro, minha equipe entrará em contato com você para agendarmos uma mentoria de 1 hora em grupo e tirarmos todas as suas dúvidas!!!</p>",5,4700),17000)
                 }
 
                 botao1.addEventListener("click", function(){

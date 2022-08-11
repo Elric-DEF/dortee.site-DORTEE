@@ -171,7 +171,7 @@
                     el.style.color = "white"
                     setTimeout(() => criarMensagem("Eu explico tudo isso em detalhes no E-BOOK que eu escrevi \"Guia Prático de Devocional Diário\"..."),200)
 
-                    setTimeout(() => criarMensagem("<img src=\"imagens/Design sem nome (1).gif\">"),1000)
+                    setTimeout(() => criarMensagem("<img id=\"imagem-dortee\" src=\"imagens/Design sem nome (1).gif\">"),1000)
 
                     setTimeout(() => 
                     scrollTo(0, mensagem.offsetTop), 1800);
@@ -182,9 +182,9 @@
 
                     setTimeout(() => criarMensagem("Por isso eu tenho dois presentes pra vc"),12000)
 
-                    setTimeout(() => criarMensagem("<p>O primeiro é um desconto 52% normalmente esse livro é vendido a R$ 97,00...</p><br> <p>Mas hoje ele sai para você a R$ 47 ou 5x de R$ 10,24</p>"),14300)
+                    setTimeout(() => criarMensagem("<p>O primeiro presente é:</p><br><p>Após a compra do livro, minha equipe entrará em contato com você para agendarmos uma mentoria de 1 hora em grupo e tirarmos todas as suas dúvidas!!!</p>"),14300)
                     
-                    setTimeout(() => continuacao("<p>O segundo presente é:</p><br><p>Após a compra do livro, minha equipe entrará em contato com você para agendarmos uma mentoria de 1 hora em grupo e tirarmos todas as suas dúvidas!!!</p>",5,4700),17000)
+                    setTimeout(() => continuacao("<p>O segundo presente é um desconto de 52% normalmente esse livro é vendido a R$ 97,00...</p><br> <p>Mas hoje ele sai para você a R$ 47 ou 5x de R$ 10,24</p>",5,4700),17700)
                 }
 
                 botao1.addEventListener("click", function(){
@@ -199,6 +199,7 @@
                 botao1.style.height = "auto"
                 botao2.style.height = "auto"
                 botao2.setAttribute("class","sim2")
+                botao1.id = "pitch"
                 botao1.href = "https://sun.eduzz.com/1562583"
                 botao2.href = "https://sun.eduzz.com/1562583"
                 botao1.innerHTML = "Já estou dentro!"

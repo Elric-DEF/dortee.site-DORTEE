@@ -29,10 +29,9 @@
     
         var chat = document.getElementById("oi")
         const som = new Audio('notificaco.wav')
-        console.log(som)
         var timerQuiz = 6500
     
-        function criarMensagem(texto){
+        function criarMensagem(texto, id){
             var mensagemBox = document.createElement("div")
             var mensagem = document.createElement("div")
             var imagemMensagem = document.createElement("img")
@@ -47,6 +46,10 @@
 
             mensagem.innerHTML = texto
 
+            if(id != undefined){
+                mensagemBox.id = id
+            }
+
             mensagemBox.appendChild(imagemMensagem)
             mensagemBox.appendChild(mensagem)
 
@@ -57,8 +60,6 @@
             som.play()
 
             setTimeout(() =>
-            console.log(mensagem.offsetTop + 20),
-            console.log(mensagem.offsetTop),
             scrollTo(0, mensagem.offsetTop), 650);
             
         }
@@ -160,10 +161,16 @@
                     el.style.color = "white"
                     setTimeout(() => criarMensagem("Eu explico tudo isso em detalhes no E-BOOK que eu escrevi \"Guia Prático de Devocional Diário\"..."),200)
 
-                    setTimeout(() => criarMensagem("<img id=\"imagem-dortee\" src=\"../imagens/Design sem nome (1).gif\">"),1000)
+                    setTimeout(() => criarMensagem("<img src=\"../imagens/Design sem nome (1).gif\">", "gif-dortee"),1000)
 
-                    setTimeout(() => 
-                    scrollTo(0, mensagem.offsetTop), 1800);
+                    setTimeout(function() {
+                        var teste = document.querySelector('div#gif-dortee')
+
+                        console.log(teste)
+
+                        scrollTo(0, teste.offsetTop);
+                    },2600)
+                    
 
                     setTimeout(() => criarMensagem("😱Eu compilei quase 14 anos de estudos sobre devocional diário nesse livro...👆👆"),8600)
 

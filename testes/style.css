@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+section{
+    height: calc(100px - 100vh);
+}
+
+.mensagem-box{
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.headline{
+    padding: 15px 25px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.headline img,
+.imagem-mensagem{
+    width: 100%;
+    max-width: 60px;
+    border-radius: 50%;
+}
+
+.chat{
+    position: relative;
+    top: 60px;
+    padding: 20px 4%;
+}
+
+.imagem-mensagem{
+    max-width: 45px;
+    max-height: 45px;
+    margin-right: 9px;
+    vertical-align: bottom;
+}
+
+.headline .texto-headline{
+    margin-left: 15px;
+    color: #fff;
+}
+
+.mensagem-box{
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.mensagem img{
+    width: 100%;
+    max-width: 180px;
+}
+
+.mensagem-box.quiz{
+    display: flex;
+    position: relative;
+}
+
+.mensagem{
+    position: relative;
+    background-color: rgb(54, 54, 54);
+    color: #fff;
+    padding: 15px 17px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0px;
+}
+
+.mensagem::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    left: -6px;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(54, 54, 54);
+    border-top-left-radius: 600px;
+}
+
+.mensagem::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-bottom-right-radius: 600px;
+}
+
+.mensagem img{
+    margin-top: 15px;
+}
+
+.quiz .container-botao1,
+.quiz .container-botao2{
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.container-botao1 a,
+.container-botao2 a{
+    display: block;
+    padding: 7px 17px;
+    height: 30px;
+    line-height: 15px;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.quiz a.sim{
+    color: #0EB955;
+    border: 1px solid #0EB955;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.quiz a.sim2{
+    color: #000000;
+    border: 1px solid #000000;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.quiz a.nao{
+    color: red;
+    border: 1px solid red;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}

@@ -88,6 +88,7 @@
             var botao2 = document.createElement("a")
 
             if (num == 1){
+                containerBotao1.classList.add("quiz1")
                 botao2.setAttribute("class","nao")
                 botao1.innerHTML = "SIM"
                 botao2.innerHTML = "Não"
@@ -111,6 +112,7 @@
                 }, {once : true})
             }
             else if(num == 2){
+                containerBotao1.classList.add("quiz2")
                 botao2.classList.remove("nao")
                 botao2.setAttribute("class","sim2")
                 botao1.innerHTML = "Sim!"
@@ -133,6 +135,7 @@
             
             }
             else if(num == 3){
+                containerBotao1.classList.add("quiz3")
                 botao2.classList.remove("sim2")
                 botao2.setAttribute("class","nao")
                 botao1.innerHTML = "SIM"
@@ -162,6 +165,7 @@
                 }, {once : true})
             }
             else if(num == 4){
+                containerBotao1.classList.add("quiz4")
                 botao2.classList.remove("nao")
                 botao2.setAttribute("class","sim2")
                 botao1.style.height = "auto"
